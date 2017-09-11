@@ -67,15 +67,25 @@ This is the README file.
 
 ### Camera Calibration
 
-#### 1. First I can found Camera Calibration reference. It explained how to compute Camera Matrix, Distortion Coefficients and how to apply it.
+#### First I can found Camera Calibration reference. It explained how to compute Camera Matrix, Distortion Coefficients and how to apply it.
 
 <p>http://docs.opencv.org/3.1.0/dc/dbb/tutorial_py_calibration.html</p>
 <p>https://github.com/paramaggarwal/CarND-Advanced-Lane-Lines</p>
 
-This code use the mathematical model of Pinhole Camera. So if we use the other then have to change the model. This is the first disadvantage. There are very many kinds of Camera Model.
+This code use the mathematical model of Pinhole Camera. So if I use the other then have to change the model. This is the first disadvantage. There are very many kinds of Camera Model.
 
-The code start by preparing Object Points which will be represent the 3D coordinates(x, y, z). 3D world in computer will be represent at 2D Monitor. So we can fixed z = 0. We know the Real World coordinates of Object. And we know the Virtual World coordinates of Object. So we can calibrate it. cv2.calibrateCamera() support it. If we use this function then we can get the Camera Matrix. And we can use cv2.undistort() to make Distortion Image to Undistortion Image.
+The code start by preparing Object Points which will be represent the 3D coordinates(x, y, z). 3D world in computer will be represent at 2D Monitor. So I can fixed z = 0. I know the Real World coordinates of Object. And I know the Virtual World coordinates of Object. So I can calibrate it. cv2.calibrateCamera() support it. If I use this function then we can get the Camera Matrix. And I can use cv2.undistort() to make Distortion Image to Undistortion Image.
 
 ![alt_text][test]
 
-However we can have one more problem that is the how to represent Perspective View.
+However we can have one more problem that is the how to represent Perspective View. I'll explain it to below.
+
+### Pipeline
+
+#### 1. Distortion Image to Undistortion Image
+
+It's already explained above stage. And if we apply it to the video image then it looks like below.
+
+![alt_text][origin]  ![alt_txt][undistort]
+
+#### 2.
