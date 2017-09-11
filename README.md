@@ -88,23 +88,48 @@ It's already explained above stage. And if we apply it to the video image then i
 
 ![alt_text][origin]  ![alt_txt][undistort]
 
-#### 2. Find the ROI
+Left is origin Image and right is Undistortion Image.
 
-I have interest at the curved lane. So we have to know where we make the lane.
+#### 2. Find the ROI and Orthogonal Transform(Inverse Perspective Transform)
+
+I have interest at the curved lane. So I have to know where I make the lane. I decided the region and apply Inverse Perspective Transform for after transform.
 
 ![alt_text][perspective]
 
+#### 3. Extract Red Channel
+
+I extract the red channel with image[:,:,0]. Below is the result. This is the second disadvantage. It has the color dependency.
+
 ![alt_text][extract_red]
+
+#### 4. Histogram Equalization
+
+I can found the reference of Histogram Equalization.
+
+http://docs.opencv.org/3.1.0/d5/daf/tutorial_py_histogram_equalization.html
+http://docs.opencv.org/3.1.0/d4/d1b/tutorial_histogram_equalization.html
+
+It makes histogram of image more smooth.
 
 ![alt_text][histo_equ]
 
+#### 5. Get Strongest Red Channel.
+
 ![alt_text][get_strongest]
+
+#### 6. Apply Sobel X Filter
 
 ![alt_text][sobel_x_filter]
 
+#### 7. Mix Sobel X Filter & Strongest Red Channel
+
 ![alt_text][combine]
 
+#### 8. Get White
+
 ![alt_text][get_white]
+
+#### 9. Fitting Curve with Regression Analysis
 
 ![alt_text][left_lane_rect0]  ![alt_text][right_lane_rect0]
 ![alt_text][left_lane_rect1]  ![alt_text][right_lane_rect1]
@@ -115,6 +140,8 @@ I have interest at the curved lane. So we have to know where we make the lane.
 ![alt_text][left_lane_rect6]  ![alt_text][right_lane_rect6]
 ![alt_text][left_lane_rect7]  ![alt_text][right_lane_rect7]
 ![alt_text][left_lane_rect8]  ![alt_text][right_lane_rect8]
+
+#### Perspective
 
 ![alt_text][need_perspective_rect]
 
