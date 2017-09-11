@@ -106,8 +106,8 @@ I extract the red channel with image[:,:,0]. Below is the result. This is the se
 
 I can found the reference of Histogram Equalization.
 
-http://docs.opencv.org/3.1.0/d5/daf/tutorial_py_histogram_equalization.html
-http://docs.opencv.org/3.1.0/d4/d1b/tutorial_histogram_equalization.html
+<p>http://docs.opencv.org/3.1.0/d5/daf/tutorial_py_histogram_equalization.html</p>
+<p>http://docs.opencv.org/3.1.0/d4/d1b/tutorial_histogram_equalization.html</p>
 
 It makes histogram of image more smooth.
 
@@ -115,9 +115,13 @@ It makes histogram of image more smooth.
 
 #### 5. Get Strongest Red Channel.
 
+Use the threshold value to 250 ~ 255
+
 ![alt_text][get_strongest]
 
 #### 6. Apply Sobel X Filter
+
+Sobel X Filter can detect change of horizontal.
 
 ![alt_text][sobel_x_filter]
 
@@ -141,7 +145,7 @@ It makes histogram of image more smooth.
 ![alt_text][left_lane_rect7]  ![alt_text][right_lane_rect7]
 ![alt_text][left_lane_rect8]  ![alt_text][right_lane_rect8]
 
-#### Perspective
+#### 10. Rendering Lane Area
 
 ![alt_text][need_perspective_rect]
 
@@ -149,16 +153,22 @@ It makes histogram of image more smooth.
 
 ![alt_text][render_lane_area]
 
+#### 11. Rendering Left Lane
+
 ![alt_text][need_perspective_left]
 
 ![alt_text][perspective_left]
 
 ![alt_text][display_left]
 
+#### 12. Rendering Right Lane too
+
 ![alt_text][need_perspective_right]
 
 ![alt_text][perspective_right]
 
 ![alt_text][display_left_right]
+
+#### 13. Add curvature
 
 ![alt_text][final_out]
