@@ -51,7 +51,7 @@ PythonOpenCV Based Lane Detect for Self-Driving Car
 [perspective_left]: ./output_images/perspective_left_rect.jpg "Perspective Left"
 [display_left]: ./output_images/display_left_rect.jpg "Display Left"
 [need_perspective_right]: ./output_images/need_perspective_right_rect.jpg "Need Perspective Right"
-[perspective_right]: ./output_images/need_perspective_right.jpg "Perspective Right"
+[perspective_right]: ./output_images/perspective_right_rect.jpg "Perspective Right"
 [display_left_right]: ./output_images/rendering_left_right_lane.jpg "Display Left & Right"
 [final_out]: ./output_images/final_output.jpg "Final Output"
 
