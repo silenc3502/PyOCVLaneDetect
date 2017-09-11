@@ -10,11 +10,13 @@ PythonOpenCV Based Lane Detect for Self-Driving Car
 * Apply Perspective Transform
 * Detect Lane Area
 * Detect Left & Right Lane
-* Determine the Curvature of the Lane & Vehicle Position.
-* Find Disadvantage to make more Good.
+* Determine the Curvature of the Lane & Vehicle Position
+* Find Disadvantage to make more Good
+* How to improve it
 
 [//]: # (Image References)
 
+[test]: ./output_images/test-undist.png "Dist to Undist"
 [origin]: ./output_images/origin.jpg "Original Image"
 [undistort]: ./output_images/after_undistort.jpg "Undistortion Image"
 [perspective]: ./output_images/after_pt.jpg' "Perspective Image"
@@ -67,5 +69,13 @@ This is the README file.
 
 #### 1. First I can found Camera Calibration reference. It explained how to compute Camera Matrix, Distortion Coefficients and how to apply it.
 
-http://docs.opencv.org/3.1.0/dc/dbb/tutorial_py_calibration.html
-https://github.com/paramaggarwal/CarND-Advanced-Lane-Lines
+<p>http://docs.opencv.org/3.1.0/dc/dbb/tutorial_py_calibration.html</p>
+<p>https://github.com/paramaggarwal/CarND-Advanced-Lane-Lines</p>
+
+This code use the mathematical model of Pinhole Camera. So if we use the other then have to change the model. This is the first disadvantage. There are very many kinds of Camera Model.
+
+The code start by preparing Object Points which will be represent the 3D coordinates(x, y, z). 3D world in computer will be represent at 2D Monitor. So we can fixed z = 0. We know the Real World coordinates of Object. And we know the Virtual World coordinates of Object. So we can calibrate it. cv2.calibrateCamera() support it. If we use this function then we can get the Camera Matrix. And we can use cv2.undistort() to make Distortion Image to Undistortion Image.
+
+![alt_text][test]
+
+However we can have one more problem that is the how to represent Perspective View.
