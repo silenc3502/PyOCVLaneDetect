@@ -52,7 +52,7 @@ PythonOpenCV Based Lane Detect for Self-Driving Car
 [display_left]: ./output_images/display_left_rect.jpg "Display Left"
 [need_perspective_right]: ./output_images/need_perspective_right_rect.jpg "Need Perspective Right"
 [perspective_right]: ./output_images/need_perspective_right.jpg "Perspective Right"
-[display_right]: ./output_images/rendering_left_right_lane.jpg "Display Left & Right"
+[display_left_right]: ./output_images/rendering_left_right_lane.jpg "Display Left & Right"
 [final_out]: ./output_images/final_output.jpg "Final Output"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
@@ -74,7 +74,7 @@ This is the README file.
 
 This code use the mathematical model of Pinhole Camera. So if I use the other then have to change the model. This is the first disadvantage. There are very many kinds of Camera Model.
 
-The code start by preparing Object Points which will be represent the 3D coordinates(x, y, z). 3D world in computer will be represent at 2D Monitor. So I can fixed z = 0. I know the Real World coordinates of Object. And I know the Virtual World coordinates of Object. So I can calibrate it. cv2.calibrateCamera() support it. If I use this function then we can get the Camera Matrix. And I can use cv2.undistort() to make Distortion Image to Undistortion Image.
+The code start by preparing Object Points which will be represent the 3D coordinates(x, y, z). 3D world in computer will be represent at 2D Monitor. So I can fixed z = 0. I know the Real World coordinates of Object. And I know the Virtual World coordinates of Object. So I can calibrate it. cv2.calibrateCamera() support it. If I use this function then we can get the Camera Matrix and Distortion Coefficients. And I can use cv2.undistort() to make Distortion Image to Undistortion Image.
 
 ![alt_text][test]
 
@@ -88,4 +88,50 @@ It's already explained above stage. And if we apply it to the video image then i
 
 ![alt_text][origin]  ![alt_txt][undistort]
 
-#### 2.
+#### 2. Find the ROI
+
+I have interest at the curved lane. So we have to know where we make the lane.
+
+![alt_text][perspective]
+
+![alt_text][extract_red]
+
+![alt_text][histo_equ]
+
+![alt_text][get_strongest]
+
+![alt_text][sobel_x_filter]
+
+![alt_text][combine]
+
+![alt_text][get_white]
+
+![alt_text][left_lane_rect0]  ![alt_text][right_lane_rect0]
+![alt_text][left_lane_rect1]  ![alt_text][right_lane_rect1]
+![alt_text][left_lane_rect2]  ![alt_text][right_lane_rect2]
+![alt_text][left_lane_rect3]  ![alt_text][right_lane_rect3]
+![alt_text][left_lane_rect4]  ![alt_text][right_lane_rect4]
+![alt_text][left_lane_rect5]  ![alt_text][right_lane_rect5]
+![alt_text][left_lane_rect6]  ![alt_text][right_lane_rect6]
+![alt_text][left_lane_rect7]  ![alt_text][right_lane_rect7]
+![alt_text][left_lane_rect8]  ![alt_text][right_lane_rect8]
+
+![alt_text][need_perspective_rect]
+
+![alt_text][perspective_rect]
+
+![alt_text][render_lane_area]
+
+![alt_text][need_perspective_left]
+
+![alt_text][perspective_left]
+
+![alt_text][display_left]
+
+![alt_text][need_perspective_right]
+
+![alt_text][perspective_right]
+
+![alt_text][display_left_right]
+
+![alt_text][final_out]
