@@ -152,13 +152,21 @@ I use quadratic function to fitting curve. Maybe Hyperbolic function, spline, or
 
 #### 10. Rendering Lane Area
 
+Below Image Area means the Lane Area
+
 ![alt_text][need_perspective_rect]
 
+We need to change it to Perspective View
+
 ![alt_text][perspective_rect]
+
+Mix with Undistortion Image
 
 ![alt_text][render_lane_area]
 
 #### 11. Rendering Left Lane
+
+Same as Lane Area. This is just for Left Lane
 
 ![alt_text][need_perspective_left]
 
@@ -167,6 +175,8 @@ I use quadratic function to fitting curve. Maybe Hyperbolic function, spline, or
 ![alt_text][display_left]
 
 #### 12. Rendering Right Lane too
+
+It's same as Lane Area. Just for Right Lane
 
 ![alt_text][need_perspective_right]
 
