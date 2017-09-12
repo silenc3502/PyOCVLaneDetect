@@ -54,6 +54,9 @@ PythonOpenCV Based Lane Detect for Self-Driving Car
 [perspective_right]: ./output_images/perspective_right_rect.jpg "Perspective Right"
 [display_left_right]: ./output_images/rendering_left_right_lane.jpg "Display Left & Right"
 [final_out]: ./output_images/final_output.jpg "Final Output"
+[solid_white]: ./output_images/solidWhite.gif "Solid White Right"
+[solid_yellow]: ./output_images/solidYellow.gif "Solid Yellow Left"
+[challenge]: ./output_images/challenge.gif "Challenge"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 ### Here I explained each steps, references, disadvantage and how to improve it.
@@ -183,7 +186,13 @@ I found the disadvantage of this pipeline.
 2. Dependency of Color
 3. Curve Fitting Model(Quadratic Function)
 
-#### 15. How to improve the pipeline ?
+#### 15. Results
+
+![alt_text][solid_white]
+![alt_text][solid_yellow]
+![alt_text][challenge]
+
+#### 16. How to improve the pipeline ?
 
 I think if we improve the algorithm then we have to use RANSAC algorithm. And we have to change the curve fitting model to hyperbolic function, spline or bezier curve. And one more we need to detect advanced edges. That is Laplacian Filter. If we implement like it then we can remove all the above disadvantage. Anyway if we do that then the logic will be like below.
 
@@ -196,7 +205,7 @@ I think if we improve the algorithm then we have to use RANSAC algorithm. And we
 7. Remove Outliers
 8. Fitting Lane
 
-#### 16. References
+#### 17. References
 
 [1] Juneja, M., & Sandhu, P. S. (2009). Performance evaluation of edge detection techniques for images in spatial domain. International Journal of Computer Theory and Engineering, 1(5), 614.
 
