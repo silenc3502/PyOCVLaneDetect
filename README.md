@@ -135,6 +135,8 @@ Sobel X Filter can detect change of horizontal.
 
 #### 9. Fitting Curve with Regression Analysis
 
+I use quadratic function to fitting curve. Maybe Hyperbolic function, spline, or bezier curve is much greater than it. This is the third disadvantage.
+
 ![alt_text][left_lane_rect0]  ![alt_text][right_lane_rect0]
 ![alt_text][left_lane_rect1]  ![alt_text][right_lane_rect1]
 ![alt_text][left_lane_rect2]  ![alt_text][right_lane_rect2]
@@ -172,3 +174,50 @@ Sobel X Filter can detect change of horizontal.
 #### 13. Add curvature
 
 ![alt_text][final_out]
+
+#### 14. Summary of Disadvantage
+
+I found the disadvantage of this pipeline.
+
+1. It has the dependency of Camera Model.
+2. Dependency of Color
+3. Curve Fitting Model(Quadratic Function)
+
+#### 15. How to improve the pipeline ?
+
+I think if we improve the algorithm then we have to use RANSAC algorithm. And we have to change the curve fitting model to hyperbolic function, spline or bezier curve. And one more we need to detect advanced edges. That is Laplacian Filter. If we implement like it then we can remove all the above disadvantage. Anyway if we do that then the logic will be like below.
+
+1. Setting ROI
+2. Apply Gaussian Filter
+3. Apply Canny Edge Filter or Laplacian Filter
+4. Apply Hough Transform
+5. Get Slope
+6. Apply RANSAC Algorithm
+7. Remove Outliers
+8. Fitting Lane
+
+#### 16. References
+
+[1] Juneja, M., & Sandhu, P. S. (2009). Performance evaluation of edge detection techniques for images in spatial domain. International Journal of Computer Theory and Engineering, 1(5), 614.
+
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.457.535&rep=rep1&type=pdf
+
+[2] Yoo, H., Yang, U., & Sohn, K. (2013). Gradient-enhancing conversion for illumination-robust lane detection. IEEE Transactions on Intelligent Transportation Systems, 14(3), 1083-1094.
+
+https://pdfs.semanticscholar.org/2bce/94e1f0d921d6876cf346103f5f3e121bfdd8.pdf
+
+[3] McCall, J. C., & Trivedi, M. M. (2006). Video-based lane estimation and tracking for driver assistance: survey, system, and evaluation. IEEE transactions on intelligent transportation systems, 7(1), 20-37.
+
+http://escholarship.org/uc/item/1bg5f8qd
+
+[4] Macro Zuliani(2008 - 2010). RANSAC for Dummies With examples using the RANSAC toolbox for Matlab & Octave and more ...
+
+http://www.ic.unicamp.br/~rocha/teaching/2012s1/mc949/aulas/ransac-4-dummies.pdf
+
+[5] Amol Borkar, Monson Hayes, & Mark T. Smith. (2009). ROBUST LANE DETECTION AND TRACKING WITH RANSAC AND KALMAN FILTER
+
+https://pdfs.semanticscholar.org/8469/c6bc70c7314a69c0736ac59b84baa402d088.pdf
+
+[6] Lan-Rong Dung, Chang-Min Huang, Yin-Yi Wu. (2013). Implementation of RANSAC Algorithm for Feature-Based Image Registration
+
+https://file.scirp.org/pdf/JCC_2013112614150696.pdf
