@@ -247,3 +247,19 @@ https://pdfs.semanticscholar.org/8469/c6bc70c7314a69c0736ac59b84baa402d088.pdf
 [6] Lan-Rong Dung, Chang-Min Huang, Yin-Yi Wu. (2013). Implementation of RANSAC Algorithm for Feature-Based Image Registration
 
 https://file.scirp.org/pdf/JCC_2013112614150696.pdf
+
+[7] https://campushippo.com/lessons/detect-highway-lane-lines-with-opencv-and-python-21438a3e2
+
+[8] https://medium.com/@mrhwick/simple-lane-detection-with-opencv-bfeb6ae54ec0
+
+[9] https://medium.com/@ldesegur/a-lane-detection-approach-for-self-driving-vehicles-c5ae1679f7ee
+
+[10] http://www.bogotobogo.com/python/OpenCV_Python/python_opencv3_Image_Gradient_Sobel_Laplacian_Derivatives_Edge_Detection.php
+
+[11] https://github.com/paramaggarwal/CarND-Advanced-Lane-Lines
+
+[12] http://docs.opencv.org/3.1.0/dc/dbb/tutorial_py_calibration.html
+
+[13] http://docs.opencv.org/3.1.0/d5/daf/tutorial_py_histogram_equalization.html
+
+[14] http://docs.opencv.org/3.1.0/d4/d1b/tutorial_histogram_equalization.html
