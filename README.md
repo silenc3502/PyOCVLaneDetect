@@ -57,6 +57,7 @@ PythonOpenCV Based Lane Detect for Self-Driving Car
 [solid_white]: ./output_images/solidWhite.gif "Solid White Right"
 [solid_yellow]: ./output_images/solidYellow.gif "Solid Yellow Left"
 [challenge]: ./output_images/challenge.gif "Challenge"
+[superior]: ./output_images/superior.gif "Superior Challenge"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 ### Here I explained each steps, references, disadvantage and how to improve it.
@@ -202,7 +203,11 @@ I found the disadvantage of this pipeline.
 ![alt_text][solid_yellow]
 ![alt_text][challenge]
 
-#### 16. How to improve the pipeline ?
+Final Image is my superior challenge. However the result was so terrible.
+
+![alt_text][superior]
+
+#### 16. How to improve the pipeline ? (More Advanced)
 
 I think if we improve the algorithm then we have to use RANSAC algorithm. And we have to change the curve fitting model to hyperbolic function, spline or bezier curve. And one more we need to detect advanced edges. That is Laplacian Filter. If we implement like it then we can remove all the above disadvantage. Anyway if we do that then the logic will be like below.
 
@@ -214,6 +219,8 @@ I think if we improve the algorithm then we have to use RANSAC algorithm. And we
 6. Apply RANSAC Algorithm
 7. Remove Outliers
 8. Fitting Lane
+
+I have no enough time to make it. So I'll study about the algorithm and do it by C++ or VHDL with enough time. After few times later I'll add it to my repo.
 
 #### 17. References
 
